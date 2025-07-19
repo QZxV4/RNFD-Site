@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting</title>
+  <script>
+    const latestVersion = "1.0.1";
+
+    const params = new URLSearchParams(window.location.search);
+    const clientVersion = params.get("version");
+
+    if (clientVersion && clientVersion !== latestVersion) {
+      window.location.href = "https://example.com/updated_script.py";
+    } else {
+      document.write("Up to date");
+    }
+  </script>
+</head>
+<body></body>
+</html>
